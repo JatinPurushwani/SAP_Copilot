@@ -1,3 +1,19 @@
+> ℹ️ **DOCUMENT STATUS: CURRENT REPOSITORY**
+>
+> This document describes the **Multi-AI Chat Platform** — the current production system.
+>
+> It is **kept for reference** because:
+> - The current system remains in production
+> - Developers continue to work on this codebase
+> - The architecture documented here is real and running
+>
+> **If you're working on:**
+> - Current chatbot system → This document is your reference
+> - Future SAP platform → See [IMPLEMENTATION_BLUEPRINT.md](../../IMPLEMENTATION_BLUEPRINT.md)
+> - Understanding the strategic shift → See [PROD_GAP_ANALYSIS.md](../../PROD_GAP_ANALYSIS.md)
+>
+> ---
+
 # Multi-AI Chat Testing Guide
 
 This is the current test reference for the repo. It reflects the live backend/frontend configuration in this workspace.

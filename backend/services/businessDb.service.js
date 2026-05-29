@@ -7,6 +7,10 @@
 // ============================================================
 
 const bizSupabase = require('../config/businessDb');
+const postgresClient = require('../config/postgres');
+
+// Provider selection: 'supabase' or 'postgres'
+const BIZ_DB_PROVIDER = (process.env.BIZ_DB_PROVIDER || 'supabase').toLowerCase();
 
 // ── Cache schema after first fetch ──
 let schemaCache = null;
@@ -79,26 +83,32 @@ const executeRawSQL = async (sql) => {
 
   console.log(`[BizDB] Executing SQL (${cleanSql.split('\n')[0].slice(0, 80)}...)`);
 
+  if (BIZ_DB_PROVIDER === 'postgres') {
+    // Direct Postgres connection
+    try {
+      const rows = await postgresClient.query(cleanSql);
+      return rows || [];
+    } catch (err) {
+      console.error('[BizDB] Postgres query error:', err.message);
+      throw new Error(`DB query failed: ${err.message}`);
+    }
+  }
+
+  // Default: Supabase RPC path
   const { data, error } = await bizSupabase.rpc('execute_biz_query', {
     query_text: cleanSql,
   });
 
   if (error) {
     console.error(`[BizDB] RPC error:`, error);
-    // Check if the RPC function itself is missing
     if (error.message?.includes('function') && (error.message?.includes('not found') || error.message?.includes('exists'))) {
       throw new Error('execute_biz_query RPC not found. Run database/business_supabase_functions.sql in your business Supabase SQL editor first.');
     }
     throw new Error(`DB query failed: ${error.message}`);
   }
 
-  // execute_biz_query returns JSONB. It could be a JSON array or a single JSON object.
   if (data === null || data === undefined) return [];
-  
-  // If it's already an array, return as-is
   if (Array.isArray(data)) return data;
-  
-  // If it's a JSON object with numeric keys, convert to array
   if (typeof data === 'object') {
     const keys = Object.keys(data);
     if (keys.every(k => !isNaN(parseInt(k)))) {
@@ -106,7 +116,6 @@ const executeRawSQL = async (sql) => {
     }
     return [data];
   }
-  
   return data;
 };
 
@@ -121,32 +130,31 @@ const getTableSchemas = async (forceRefresh = false) => {
   }
 
   try {
-    // Try the dedicated RPC function first
-    const { data, error } = await bizSupabase.rpc('get_business_tables');
-    
-    if (!error && data) {
-      // Parse JSONB result — could be array or object
-      let tables = data;
-      if (typeof tables === 'string') tables = JSON.parse(tables);
-      if (!Array.isArray(tables) && typeof tables === 'object') {
-        tables = Object.values(tables);
-      }
-      
-      schemaCache = Array.isArray(tables) ? tables : [];
+    // If using Supabase, try the dedicated RPC function first
+    if (BIZ_DB_PROVIDER === 'supabase') {
+      const { data, error } = await bizSupabase.rpc('get_business_tables');
+      if (!error && data) {
+        let tables = data;
+        if (typeof tables === 'string') tables = JSON.parse(tables);
+        if (!Array.isArray(tables) && typeof tables === 'object') {
+          tables = Object.values(tables);
+        }
 
-      // Annotate columns with FK references
-      const fkMap = await loadForeignKeyMap();
-      for (const t of schemaCache) {
-        if (Array.isArray(t.columns)) {
-          for (const c of t.columns) {
-            const fk = fkMap[`${t.table_name}.${c.column_name}`];
-            if (fk) c.foreign_key = fk;
+        schemaCache = Array.isArray(tables) ? tables : [];
+
+        const fkMap = await loadForeignKeyMap();
+        for (const t of schemaCache) {
+          if (Array.isArray(t.columns)) {
+            for (const c of t.columns) {
+              const fk = fkMap[`${t.table_name}.${c.column_name}`];
+              if (fk) c.foreign_key = fk;
+            }
           }
         }
-      }
 
-      lastFetched = now;
-      return schemaCache;
+        lastFetched = now;
+        return schemaCache;
+      }
     }
   } catch (e) {
     console.warn('[BizDB] get_business_tables RPC failed:', e.message);
