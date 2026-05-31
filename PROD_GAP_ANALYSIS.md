@@ -12,7 +12,7 @@
 
 This document exists because **we need to align before we build further.**
 
-The repository contains six months of good engineering work. However, there is a significant gap between what has been built and what the product is intended to become.
+The repository contains weeks of good engineering work. However, there is a significant gap between what has been built and what the product is intended to become.
 
 **This gap is not a code quality issue.** The code is well-structured. The gap is a **direction issue.**
 

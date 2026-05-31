@@ -1,5 +1,5 @@
 {
-  "mcpServers": {
+  "servers": {
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\jatin\\Copilot_SAP"]
