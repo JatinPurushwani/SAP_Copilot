@@ -1,0 +1,34 @@
+{
+  "Revenue": {
+    "table": "billing_documents",
+    "column": "total_amount",
+    "aggregation": "SUM"
+  },
+  "Customer": {
+    "table": "customers",
+    "column": "customer_name"
+  },
+  "Vendor": {
+    "table": "vendors"
+  },
+  "Vendor Invoice": {
+  "table": "invoices",
+  "invoice_type": "Purchase"
+  },
+
+  "Customer Billing": {
+  "table": "billing_documents"
+  },
+  "Sales Order": {
+    "table": "sales_orders"
+  },
+  "Material": {
+    "table": "materials"
+  },
+  "Employee": {
+    "table": "employees"
+  },
+  "Purchase Order": {
+    "table": "purchase_orders"
+  }
+}

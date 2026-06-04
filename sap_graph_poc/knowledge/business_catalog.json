@@ -1,0 +1,170 @@
+{
+  "Activities": {
+    "table": "activities"
+  },
+  "Bank Accounts": {
+    "table": "bank_accounts"
+  },
+  "Billing Document Items": {
+    "table": "billing_document_items"
+  },
+  "Billing Documents": {
+    "table": "billing_documents"
+  },
+  "Bills Of Material": {
+    "table": "bills_of_material"
+  },
+  "Bom Items": {
+    "table": "bom_items"
+  },
+  "Campaigns": {
+    "table": "campaigns"
+  },
+  "Companies": {
+    "table": "companies"
+  },
+  "Contacts": {
+    "table": "contacts"
+  },
+  "Cost Center Allocation": {
+    "table": "cost_center_allocation"
+  },
+  "Cost Centers": {
+    "table": "cost_centers"
+  },
+  "Cost Elements": {
+    "table": "cost_elements"
+  },
+  "Customers": {
+    "table": "customers"
+  },
+  "Delivery Items": {
+    "table": "delivery_items"
+  },
+  "Delivery Orders": {
+    "table": "delivery_orders"
+  },
+  "Employee Assignments": {
+    "table": "employee_assignments"
+  },
+  "Employees": {
+    "table": "employees"
+  },
+  "Gl Accounts": {
+    "table": "gl_accounts"
+  },
+  "Goods Receipt Items": {
+    "table": "goods_receipt_items"
+  },
+  "Goods Receipts": {
+    "table": "goods_receipts"
+  },
+  "Internal Orders": {
+    "table": "internal_orders"
+  },
+  "Invoice Items": {
+    "table": "invoice_items"
+  },
+  "Invoices": {
+    "table": "invoices"
+  },
+  "Journal Entries": {
+    "table": "journal_entries"
+  },
+  "Journal Entry Items": {
+    "table": "journal_entry_items"
+  },
+  "Leave Requests": {
+    "table": "leave_requests"
+  },
+  "Leave Types": {
+    "table": "leave_types"
+  },
+  "Material Plant Data": {
+    "table": "material_plant_data"
+  },
+  "Material Storage Location": {
+    "table": "material_storage_location"
+  },
+  "Materials": {
+    "table": "materials"
+  },
+  "Opportunities": {
+    "table": "opportunities"
+  },
+  "Payroll Details": {
+    "table": "payroll_details"
+  },
+  "Payroll Runs": {
+    "table": "payroll_runs"
+  },
+  "Plants": {
+    "table": "plants"
+  },
+  "Positions": {
+    "table": "positions"
+  },
+  "Production Confirmations": {
+    "table": "production_confirmations"
+  },
+  "Production Order Operations": {
+    "table": "production_order_operations"
+  },
+  "Production Orders": {
+    "table": "production_orders"
+  },
+  "Profit Center": {
+    "table": "profit_center"
+  },
+  "Purchase Order Items": {
+    "table": "purchase_order_items"
+  },
+  "Purchase Orders": {
+    "table": "purchase_orders"
+  },
+  "Purchase Requisition Items": {
+    "table": "purchase_requisition_items"
+  },
+  "Purchase Requisitions": {
+    "table": "purchase_requisitions"
+  },
+  "Routing Operations": {
+    "table": "routing_operations"
+  },
+  "Routings": {
+    "table": "routings"
+  },
+  "Salaries": {
+    "table": "salaries"
+  },
+  "Sales Order Items": {
+    "table": "sales_order_items"
+  },
+  "Sales Orders": {
+    "table": "sales_orders"
+  },
+  "Stock Movements": {
+    "table": "stock_movements"
+  },
+  "Storage Locations": {
+    "table": "storage_locations"
+  },
+  "Supplier Contracts": {
+    "table": "supplier_contracts"
+  },
+  "Supplier Quotation Items": {
+    "table": "supplier_quotation_items"
+  },
+  "Supplier Quotations": {
+    "table": "supplier_quotations"
+  },
+  "Supplier Scorecards": {
+    "table": "supplier_scorecards"
+  },
+  "Vendors": {
+    "table": "vendors"
+  },
+  "Work Centers": {
+    "table": "work_centers"
+  }
+}

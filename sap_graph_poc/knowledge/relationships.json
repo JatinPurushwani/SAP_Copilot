@@ -1,0 +1,779 @@
+[
+  {
+    "from_table": "activities",
+    "from_column": "opportunity_id",
+    "to_table": "opportunities",
+    "to_column": "id",
+    "join_condition": "activities.opportunity_id = opportunities.id"
+  },
+  {
+    "from_table": "activities",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "activities.customer_id = customers.id"
+  },
+  {
+    "from_table": "activities",
+    "from_column": "assigned_to_employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "activities.assigned_to_employee_id = employees.id"
+  },
+  {
+    "from_table": "activities",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "activities.company_id = companies.id"
+  },
+  {
+    "from_table": "bank_accounts",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "bank_accounts.company_id = companies.id"
+  },
+  {
+    "from_table": "billing_document_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "billing_document_items.material_id = materials.id"
+  },
+  {
+    "from_table": "billing_document_items",
+    "from_column": "billing_document_id",
+    "to_table": "billing_documents",
+    "to_column": "id",
+    "join_condition": "billing_document_items.billing_document_id = billing_documents.id"
+  },
+  {
+    "from_table": "billing_documents",
+    "from_column": "sales_order_id",
+    "to_table": "sales_orders",
+    "to_column": "id",
+    "join_condition": "billing_documents.sales_order_id = sales_orders.id"
+  },
+  {
+    "from_table": "billing_documents",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "billing_documents.company_id = companies.id"
+  },
+  {
+    "from_table": "billing_documents",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "billing_documents.customer_id = customers.id"
+  },
+  {
+    "from_table": "bills_of_material",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "bills_of_material.company_id = companies.id"
+  },
+  {
+    "from_table": "bills_of_material",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "bills_of_material.material_id = materials.id"
+  },
+  {
+    "from_table": "bills_of_material",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "bills_of_material.plant_id = plants.id"
+  },
+  {
+    "from_table": "bom_items",
+    "from_column": "bom_id",
+    "to_table": "bills_of_material",
+    "to_column": "id",
+    "join_condition": "bom_items.bom_id = bills_of_material.id"
+  },
+  {
+    "from_table": "bom_items",
+    "from_column": "component_material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "bom_items.component_material_id = materials.id"
+  },
+  {
+    "from_table": "campaigns",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "campaigns.company_id = companies.id"
+  },
+  {
+    "from_table": "contacts",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "contacts.company_id = companies.id"
+  },
+  {
+    "from_table": "contacts",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "contacts.customer_id = customers.id"
+  },
+  {
+    "from_table": "cost_center_allocation",
+    "from_column": "to_cost_center_id",
+    "to_table": "cost_centers",
+    "to_column": "id",
+    "join_condition": "cost_center_allocation.to_cost_center_id = cost_centers.id"
+  },
+  {
+    "from_table": "cost_center_allocation",
+    "from_column": "from_cost_center_id",
+    "to_table": "cost_centers",
+    "to_column": "id",
+    "join_condition": "cost_center_allocation.from_cost_center_id = cost_centers.id"
+  },
+  {
+    "from_table": "cost_centers",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "cost_centers.company_id = companies.id"
+  },
+  {
+    "from_table": "cost_elements",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "cost_elements.company_id = companies.id"
+  },
+  {
+    "from_table": "customers",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "customers.company_id = companies.id"
+  },
+  {
+    "from_table": "delivery_items",
+    "from_column": "delivery_id",
+    "to_table": "delivery_orders",
+    "to_column": "id",
+    "join_condition": "delivery_items.delivery_id = delivery_orders.id"
+  },
+  {
+    "from_table": "delivery_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "delivery_items.material_id = materials.id"
+  },
+  {
+    "from_table": "delivery_orders",
+    "from_column": "sales_order_id",
+    "to_table": "sales_orders",
+    "to_column": "id",
+    "join_condition": "delivery_orders.sales_order_id = sales_orders.id"
+  },
+  {
+    "from_table": "delivery_orders",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "delivery_orders.customer_id = customers.id"
+  },
+  {
+    "from_table": "delivery_orders",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "delivery_orders.plant_id = plants.id"
+  },
+  {
+    "from_table": "delivery_orders",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "delivery_orders.company_id = companies.id"
+  },
+  {
+    "from_table": "employee_assignments",
+    "from_column": "position_id",
+    "to_table": "positions",
+    "to_column": "id",
+    "join_condition": "employee_assignments.position_id = positions.id"
+  },
+  {
+    "from_table": "employee_assignments",
+    "from_column": "cost_center_id",
+    "to_table": "cost_centers",
+    "to_column": "id",
+    "join_condition": "employee_assignments.cost_center_id = cost_centers.id"
+  },
+  {
+    "from_table": "employee_assignments",
+    "from_column": "employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "employee_assignments.employee_id = employees.id"
+  },
+  {
+    "from_table": "employees",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "employees.company_id = companies.id"
+  },
+  {
+    "from_table": "gl_accounts",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "gl_accounts.company_id = companies.id"
+  },
+  {
+    "from_table": "goods_receipt_items",
+    "from_column": "storage_location_id",
+    "to_table": "storage_locations",
+    "to_column": "id",
+    "join_condition": "goods_receipt_items.storage_location_id = storage_locations.id"
+  },
+  {
+    "from_table": "goods_receipt_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "goods_receipt_items.material_id = materials.id"
+  },
+  {
+    "from_table": "goods_receipt_items",
+    "from_column": "goods_receipt_id",
+    "to_table": "goods_receipts",
+    "to_column": "id",
+    "join_condition": "goods_receipt_items.goods_receipt_id = goods_receipts.id"
+  },
+  {
+    "from_table": "goods_receipts",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "goods_receipts.company_id = companies.id"
+  },
+  {
+    "from_table": "goods_receipts",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "goods_receipts.plant_id = plants.id"
+  },
+  {
+    "from_table": "goods_receipts",
+    "from_column": "purchase_order_id",
+    "to_table": "purchase_orders",
+    "to_column": "id",
+    "join_condition": "goods_receipts.purchase_order_id = purchase_orders.id"
+  },
+  {
+    "from_table": "goods_receipts",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "goods_receipts.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "internal_orders",
+    "from_column": "cost_center_id",
+    "to_table": "cost_centers",
+    "to_column": "id",
+    "join_condition": "internal_orders.cost_center_id = cost_centers.id"
+  },
+  {
+    "from_table": "internal_orders",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "internal_orders.company_id = companies.id"
+  },
+  {
+    "from_table": "invoice_items",
+    "from_column": "gl_account_id",
+    "to_table": "gl_accounts",
+    "to_column": "id",
+    "join_condition": "invoice_items.gl_account_id = gl_accounts.id"
+  },
+  {
+    "from_table": "invoice_items",
+    "from_column": "invoice_id",
+    "to_table": "invoices",
+    "to_column": "id",
+    "join_condition": "invoice_items.invoice_id = invoices.id"
+  },
+  {
+    "from_table": "invoices",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "invoices.company_id = companies.id"
+  },
+  {
+    "from_table": "invoices",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "invoices.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "invoices",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "invoices.customer_id = customers.id"
+  },
+  {
+    "from_table": "journal_entries",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "journal_entries.company_id = companies.id"
+  },
+  {
+    "from_table": "journal_entry_items",
+    "from_column": "journal_entry_id",
+    "to_table": "journal_entries",
+    "to_column": "id",
+    "join_condition": "journal_entry_items.journal_entry_id = journal_entries.id"
+  },
+  {
+    "from_table": "journal_entry_items",
+    "from_column": "gl_account_id",
+    "to_table": "gl_accounts",
+    "to_column": "id",
+    "join_condition": "journal_entry_items.gl_account_id = gl_accounts.id"
+  },
+  {
+    "from_table": "leave_requests",
+    "from_column": "employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "leave_requests.employee_id = employees.id"
+  },
+  {
+    "from_table": "leave_requests",
+    "from_column": "leave_type_id",
+    "to_table": "leave_types",
+    "to_column": "id",
+    "join_condition": "leave_requests.leave_type_id = leave_types.id"
+  },
+  {
+    "from_table": "leave_requests",
+    "from_column": "approved_by_employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "leave_requests.approved_by_employee_id = employees.id"
+  },
+  {
+    "from_table": "leave_types",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "leave_types.company_id = companies.id"
+  },
+  {
+    "from_table": "material_plant_data",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "material_plant_data.material_id = materials.id"
+  },
+  {
+    "from_table": "material_plant_data",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "material_plant_data.plant_id = plants.id"
+  },
+  {
+    "from_table": "material_storage_location",
+    "from_column": "storage_location_id",
+    "to_table": "storage_locations",
+    "to_column": "id",
+    "join_condition": "material_storage_location.storage_location_id = storage_locations.id"
+  },
+  {
+    "from_table": "material_storage_location",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "material_storage_location.material_id = materials.id"
+  },
+  {
+    "from_table": "opportunities",
+    "from_column": "assigned_to_employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "opportunities.assigned_to_employee_id = employees.id"
+  },
+  {
+    "from_table": "opportunities",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "opportunities.company_id = companies.id"
+  },
+  {
+    "from_table": "opportunities",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "opportunities.customer_id = customers.id"
+  },
+  {
+    "from_table": "payroll_details",
+    "from_column": "employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "payroll_details.employee_id = employees.id"
+  },
+  {
+    "from_table": "payroll_details",
+    "from_column": "payroll_run_id",
+    "to_table": "payroll_runs",
+    "to_column": "id",
+    "join_condition": "payroll_details.payroll_run_id = payroll_runs.id"
+  },
+  {
+    "from_table": "payroll_runs",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "payroll_runs.company_id = companies.id"
+  },
+  {
+    "from_table": "plants",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "plants.company_id = companies.id"
+  },
+  {
+    "from_table": "positions",
+    "from_column": "reporting_to_position_id",
+    "to_table": "positions",
+    "to_column": "id",
+    "join_condition": "positions.reporting_to_position_id = positions.id"
+  },
+  {
+    "from_table": "positions",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "positions.company_id = companies.id"
+  },
+  {
+    "from_table": "production_confirmations",
+    "from_column": "production_order_id",
+    "to_table": "production_orders",
+    "to_column": "id",
+    "join_condition": "production_confirmations.production_order_id = production_orders.id"
+  },
+  {
+    "from_table": "production_order_operations",
+    "from_column": "production_order_id",
+    "to_table": "production_orders",
+    "to_column": "id",
+    "join_condition": "production_order_operations.production_order_id = production_orders.id"
+  },
+  {
+    "from_table": "production_order_operations",
+    "from_column": "work_center_id",
+    "to_table": "work_centers",
+    "to_column": "id",
+    "join_condition": "production_order_operations.work_center_id = work_centers.id"
+  },
+  {
+    "from_table": "production_orders",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "production_orders.material_id = materials.id"
+  },
+  {
+    "from_table": "production_orders",
+    "from_column": "bom_id",
+    "to_table": "bills_of_material",
+    "to_column": "id",
+    "join_condition": "production_orders.bom_id = bills_of_material.id"
+  },
+  {
+    "from_table": "production_orders",
+    "from_column": "routing_id",
+    "to_table": "routings",
+    "to_column": "id",
+    "join_condition": "production_orders.routing_id = routings.id"
+  },
+  {
+    "from_table": "production_orders",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "production_orders.company_id = companies.id"
+  },
+  {
+    "from_table": "production_orders",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "production_orders.plant_id = plants.id"
+  },
+  {
+    "from_table": "profit_center",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "profit_center.company_id = companies.id"
+  },
+  {
+    "from_table": "purchase_order_items",
+    "from_column": "purchase_order_id",
+    "to_table": "purchase_orders",
+    "to_column": "id",
+    "join_condition": "purchase_order_items.purchase_order_id = purchase_orders.id"
+  },
+  {
+    "from_table": "purchase_order_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "purchase_order_items.material_id = materials.id"
+  },
+  {
+    "from_table": "purchase_orders",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "purchase_orders.plant_id = plants.id"
+  },
+  {
+    "from_table": "purchase_orders",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "purchase_orders.company_id = companies.id"
+  },
+  {
+    "from_table": "purchase_orders",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "purchase_orders.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "purchase_requisition_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "purchase_requisition_items.material_id = materials.id"
+  },
+  {
+    "from_table": "purchase_requisition_items",
+    "from_column": "purchase_requisition_id",
+    "to_table": "purchase_requisitions",
+    "to_column": "id",
+    "join_condition": "purchase_requisition_items.purchase_requisition_id = purchase_requisitions.id"
+  },
+  {
+    "from_table": "purchase_requisitions",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "purchase_requisitions.company_id = companies.id"
+  },
+  {
+    "from_table": "routing_operations",
+    "from_column": "routing_id",
+    "to_table": "routings",
+    "to_column": "id",
+    "join_condition": "routing_operations.routing_id = routings.id"
+  },
+  {
+    "from_table": "routing_operations",
+    "from_column": "work_center_id",
+    "to_table": "work_centers",
+    "to_column": "id",
+    "join_condition": "routing_operations.work_center_id = work_centers.id"
+  },
+  {
+    "from_table": "routings",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "routings.plant_id = plants.id"
+  },
+  {
+    "from_table": "routings",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "routings.company_id = companies.id"
+  },
+  {
+    "from_table": "routings",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "routings.material_id = materials.id"
+  },
+  {
+    "from_table": "salaries",
+    "from_column": "employee_id",
+    "to_table": "employees",
+    "to_column": "id",
+    "join_condition": "salaries.employee_id = employees.id"
+  },
+  {
+    "from_table": "sales_order_items",
+    "from_column": "sales_order_id",
+    "to_table": "sales_orders",
+    "to_column": "id",
+    "join_condition": "sales_order_items.sales_order_id = sales_orders.id"
+  },
+  {
+    "from_table": "sales_order_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "sales_order_items.material_id = materials.id"
+  },
+  {
+    "from_table": "sales_orders",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "sales_orders.company_id = companies.id"
+  },
+  {
+    "from_table": "sales_orders",
+    "from_column": "customer_id",
+    "to_table": "customers",
+    "to_column": "id",
+    "join_condition": "sales_orders.customer_id = customers.id"
+  },
+  {
+    "from_table": "sales_orders",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "sales_orders.plant_id = plants.id"
+  },
+  {
+    "from_table": "stock_movements",
+    "from_column": "from_storage_location_id",
+    "to_table": "storage_locations",
+    "to_column": "id",
+    "join_condition": "stock_movements.from_storage_location_id = storage_locations.id"
+  },
+  {
+    "from_table": "stock_movements",
+    "from_column": "to_storage_location_id",
+    "to_table": "storage_locations",
+    "to_column": "id",
+    "join_condition": "stock_movements.to_storage_location_id = storage_locations.id"
+  },
+  {
+    "from_table": "stock_movements",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "stock_movements.plant_id = plants.id"
+  },
+  {
+    "from_table": "stock_movements",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "stock_movements.company_id = companies.id"
+  },
+  {
+    "from_table": "stock_movements",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "stock_movements.material_id = materials.id"
+  },
+  {
+    "from_table": "storage_locations",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "storage_locations.plant_id = plants.id"
+  },
+  {
+    "from_table": "supplier_contracts",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "supplier_contracts.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "supplier_quotation_items",
+    "from_column": "material_id",
+    "to_table": "materials",
+    "to_column": "id",
+    "join_condition": "supplier_quotation_items.material_id = materials.id"
+  },
+  {
+    "from_table": "supplier_quotation_items",
+    "from_column": "quotation_id",
+    "to_table": "supplier_quotations",
+    "to_column": "id",
+    "join_condition": "supplier_quotation_items.quotation_id = supplier_quotations.id"
+  },
+  {
+    "from_table": "supplier_quotations",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "supplier_quotations.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "supplier_scorecards",
+    "from_column": "vendor_id",
+    "to_table": "vendors",
+    "to_column": "id",
+    "join_condition": "supplier_scorecards.vendor_id = vendors.id"
+  },
+  {
+    "from_table": "vendors",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "vendors.company_id = companies.id"
+  },
+  {
+    "from_table": "work_centers",
+    "from_column": "plant_id",
+    "to_table": "plants",
+    "to_column": "id",
+    "join_condition": "work_centers.plant_id = plants.id"
+  },
+  {
+    "from_table": "work_centers",
+    "from_column": "cost_center_id",
+    "to_table": "cost_centers",
+    "to_column": "id",
+    "join_condition": "work_centers.cost_center_id = cost_centers.id"
+  },
+  {
+    "from_table": "work_centers",
+    "from_column": "company_id",
+    "to_table": "companies",
+    "to_column": "id",
+    "join_condition": "work_centers.company_id = companies.id"
+  }
+]

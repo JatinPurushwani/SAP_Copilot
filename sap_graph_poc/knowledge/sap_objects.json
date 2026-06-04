@@ -1,0 +1,3072 @@
+[
+  {
+    "object": "activities",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "opportunity_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "activity_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "subject",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "description",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "activity_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "completed_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "assigned_to_employee_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "bank_accounts",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "bank_account_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "bank_name",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "account_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "balance",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "billing_document_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "billing_document_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "tax_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "billing_documents",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "invoice_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "sales_order_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "invoice_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "due_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "total_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "bills_of_material",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "bom_version",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "bom_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "effective_from",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "effective_to",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "bom_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "bom_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "component_material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "unit_of_measure",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "campaigns",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "campaign_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "campaign_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "start_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "end_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "budget",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "target_audience",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "companies",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "company_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "country",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "tax_id",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "contacts",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "first_name",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "last_name",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "title",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "email",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "phone_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "mobile_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "department",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_primary_contact",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "cost_center_allocation",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "from_cost_center_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "to_cost_center_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "allocation_percentage",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "valid_from",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "valid_to",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "cost_centers",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "cost_center_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "cost_center_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "department",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "responsible_person",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "cost_elements",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "cost_element_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "cost_element_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "cost_element_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "customers",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "customer_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "customer_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "customer_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "country",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "credit_limit",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "payment_terms",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "tax_id",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "delivery_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "delivery_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity_delivered",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "delivery_orders",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "delivery_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "sales_order_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "delivery_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "shipping_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "employee_assignments",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "employee_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "position_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "assignment_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "end_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "cost_center_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "is_current",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "employees",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "employee_id",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "first_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "last_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "date_of_birth",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "gender",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "marital_status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "nationality",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "email",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "phone_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "address",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "city",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "country",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "postal_code",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "employee_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "employment_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "termination_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "gl_accounts",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "account_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "account_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "account_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "account_group",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "goods_receipt_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "goods_receipt_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "storage_location_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "batch_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "expiry_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "goods_receipts",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "gr_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "gr_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "purchase_order_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "internal_orders",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "order_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "order_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "description",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "cost_center_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "budget_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "actual_cost",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "invoice_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "invoice_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "gl_account_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "tax_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "invoices",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "invoice_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "invoice_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "invoice_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "amount",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "due_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "journal_entries",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "document_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "posting_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "document_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "reference_document",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "document_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_by",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "journal_entry_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "journal_entry_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "gl_account_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "debit_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "credit_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "description",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "leave_requests",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "employee_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "leave_type_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "from_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "to_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "number_of_days",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "reason",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "approved_by_employee_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "leave_types",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "leave_type_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "leave_type_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "annual_entitlement",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "is_paid",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "material_plant_data",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "reorder_point",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "reorder_quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "safety_stock",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "procurement_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "lead_time_days",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "last_receipt_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "material_storage_location",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "storage_location_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity_on_hand",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "reserved_quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "available_quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "last_counted_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "materials",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "material_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "material_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "material_group",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "unit_of_measure",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "standard_price",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "opportunities",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "opportunity_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "opportunity_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "description",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "opportunity_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "expected_value",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "probability_percentage",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "expected_close_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "assigned_to_employee_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "stage",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "payroll_details",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "payroll_run_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "employee_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "basic_salary",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "allowances",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "deductions",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "gross_pay",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "net_pay",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "payroll_runs",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "payroll_period",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "payroll_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "plants",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "plant_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "location",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "plant_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "positions",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "position_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "position_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "department",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "reporting_to_position_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "job_grade",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "production_confirmations",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "production_order_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "confirmation_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "quantity_produced",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "scrap_quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "production_order_operations",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "production_order_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "work_center_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "operation_sequence",
+        "data_type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "operation_status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "actual_start_date",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "actual_end_date",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "production_orders",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "production_order_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "bom_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "routing_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "order_quantity",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "planned_start_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "planned_end_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "profit_center",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "prctr_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "prctr_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "responsible_person",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "purchase_order_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "purchase_order_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity_ordered",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "quantity_received",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "line_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "purchase_orders",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "po_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "po_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "delivery_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "total_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "purchase_requisition_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "purchase_requisition_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "delivery_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "purchase_requisitions",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "requisition_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "requisition_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "requested_by",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "routing_operations",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "routing_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "work_center_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "operation_sequence",
+        "data_type": "integer",
+        "nullable": false
+      },
+      {
+        "name": "operation_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "duration_minutes",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "setup_time_minutes",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "routings",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "routing_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "routing_version",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "salaries",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "employee_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "salary_period",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "basic_salary",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "allowances",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "deductions",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "gross_salary",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "net_salary",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "valid_from",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "valid_to",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "sales_order_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "sales_order_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity_ordered",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "quantity_delivered",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": false
+      },
+      {
+        "name": "line_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_item_number",
+        "data_type": "integer",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "sales_orders",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "sales_order_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "customer_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "so_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "requested_delivery_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "total_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "stock_movements",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "from_storage_location_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "to_storage_location_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "movement_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "movement_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "document_number",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "reference_doc",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "storage_locations",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "sloc_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "sloc_name",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "warehouse_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "supplier_contracts",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "contract_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "contract_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "start_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "end_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "contract_value",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "payment_terms",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "supplier_quotation_items",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quotation_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "material_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quantity",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "unit_price",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "line_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "supplier_quotations",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "quotation_number",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "quotation_date",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "validity_end_date",
+        "data_type": "date",
+        "nullable": true
+      },
+      {
+        "name": "total_amount",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "currency",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "status",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "supplier_scorecards",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "vendor_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "evaluation_period_from",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "evaluation_period_to",
+        "data_type": "date",
+        "nullable": false
+      },
+      {
+        "name": "quality_score",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "delivery_score",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "cost_score",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "overall_score",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "performance_rating",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "vendors",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "vendor_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "vendor_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "vendor_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "country",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "payment_terms",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "tax_id",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  },
+  {
+    "object": "work_centers",
+    "columns": [
+      {
+        "name": "id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "company_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "plant_id",
+        "data_type": "uuid",
+        "nullable": false
+      },
+      {
+        "name": "work_center_code",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "work_center_name",
+        "data_type": "character varying",
+        "nullable": false
+      },
+      {
+        "name": "work_center_type",
+        "data_type": "character varying",
+        "nullable": true
+      },
+      {
+        "name": "capacity_per_period",
+        "data_type": "numeric",
+        "nullable": true
+      },
+      {
+        "name": "cost_center_id",
+        "data_type": "uuid",
+        "nullable": true
+      },
+      {
+        "name": "is_active",
+        "data_type": "boolean",
+        "nullable": true
+      },
+      {
+        "name": "created_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      },
+      {
+        "name": "updated_at",
+        "data_type": "timestamp without time zone",
+        "nullable": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,1064 @@
+{
+  "activities": {
+    "table_name": "activities",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 13,
+    "columns": [
+      "id",
+      "company_id",
+      "customer_id",
+      "opportunity_id",
+      "activity_type",
+      "subject",
+      "description",
+      "activity_date",
+      "completed_date",
+      "assigned_to_employee_id",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "bank_accounts": {
+    "table_name": "bank_accounts",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 10,
+    "columns": [
+      "id",
+      "company_id",
+      "bank_account_code",
+      "bank_name",
+      "account_number",
+      "currency",
+      "balance",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "billing_document_items": {
+    "table_name": "billing_document_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "billing_document_id",
+      "material_id",
+      "quantity",
+      "unit_price",
+      "line_amount",
+      "tax_amount",
+      "created_at"
+    ]
+  },
+  "billing_documents": {
+    "table_name": "billing_documents",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "company_id",
+      "invoice_number",
+      "sales_order_id",
+      "customer_id",
+      "invoice_date",
+      "due_date",
+      "total_amount",
+      "currency",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "bills_of_material": {
+    "table_name": "bills_of_material",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "material_id",
+      "bom_version",
+      "bom_type",
+      "status",
+      "effective_from",
+      "effective_to",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "bom_items": {
+    "table_name": "bom_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "bom_id",
+      "component_material_id",
+      "quantity",
+      "unit_of_measure",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "campaigns": {
+    "table_name": "campaigns",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "campaign_name",
+      "campaign_type",
+      "start_date",
+      "end_date",
+      "budget",
+      "target_audience",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "companies": {
+    "table_name": "companies",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "company_code",
+      "company_name",
+      "country",
+      "currency",
+      "tax_id",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "contacts": {
+    "table_name": "contacts",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 13,
+    "columns": [
+      "id",
+      "company_id",
+      "customer_id",
+      "first_name",
+      "last_name",
+      "title",
+      "email",
+      "phone_number",
+      "mobile_number",
+      "department",
+      "is_primary_contact",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "cost_center_allocation": {
+    "table_name": "cost_center_allocation",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "from_cost_center_id",
+      "to_cost_center_id",
+      "allocation_percentage",
+      "valid_from",
+      "valid_to",
+      "created_at"
+    ]
+  },
+  "cost_centers": {
+    "table_name": "cost_centers",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "company_id",
+      "cost_center_code",
+      "cost_center_name",
+      "department",
+      "responsible_person",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "cost_elements": {
+    "table_name": "cost_elements",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "company_id",
+      "cost_element_code",
+      "cost_element_name",
+      "cost_element_type",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "customers": {
+    "table_name": "customers",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "company_id",
+      "customer_code",
+      "customer_name",
+      "customer_type",
+      "country",
+      "credit_limit",
+      "payment_terms",
+      "tax_id",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "delivery_items": {
+    "table_name": "delivery_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 6,
+    "columns": [
+      "id",
+      "delivery_id",
+      "material_id",
+      "quantity_delivered",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "delivery_orders": {
+    "table_name": "delivery_orders",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "delivery_number",
+      "sales_order_id",
+      "customer_id",
+      "delivery_date",
+      "shipping_date",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "employee_assignments": {
+    "table_name": "employee_assignments",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "employee_id",
+      "position_id",
+      "assignment_date",
+      "end_date",
+      "cost_center_id",
+      "is_current",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "employees": {
+    "table_name": "employees",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 21,
+    "columns": [
+      "id",
+      "company_id",
+      "employee_id",
+      "first_name",
+      "last_name",
+      "date_of_birth",
+      "gender",
+      "marital_status",
+      "nationality",
+      "email",
+      "phone_number",
+      "address",
+      "city",
+      "country",
+      "postal_code",
+      "employee_type",
+      "employment_date",
+      "termination_date",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "gl_accounts": {
+    "table_name": "gl_accounts",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 10,
+    "columns": [
+      "id",
+      "company_id",
+      "account_number",
+      "account_name",
+      "account_type",
+      "account_group",
+      "currency",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "goods_receipt_items": {
+    "table_name": "goods_receipt_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "goods_receipt_id",
+      "material_id",
+      "storage_location_id",
+      "quantity",
+      "batch_number",
+      "expiry_date",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "goods_receipts": {
+    "table_name": "goods_receipts",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 10,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "gr_number",
+      "gr_date",
+      "purchase_order_id",
+      "vendor_id",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "internal_orders": {
+    "table_name": "internal_orders",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "order_number",
+      "order_type",
+      "description",
+      "cost_center_id",
+      "budget_amount",
+      "actual_cost",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "invoice_items": {
+    "table_name": "invoice_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "invoice_id",
+      "gl_account_id",
+      "quantity",
+      "unit_price",
+      "line_amount",
+      "tax_amount",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "invoices": {
+    "table_name": "invoices",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 13,
+    "columns": [
+      "id",
+      "company_id",
+      "invoice_number",
+      "invoice_date",
+      "vendor_id",
+      "customer_id",
+      "invoice_type",
+      "amount",
+      "currency",
+      "status",
+      "due_date",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "journal_entries": {
+    "table_name": "journal_entries",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "document_number",
+      "posting_date",
+      "document_date",
+      "reference_document",
+      "document_type",
+      "status",
+      "created_by",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "journal_entry_items": {
+    "table_name": "journal_entry_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "journal_entry_id",
+      "gl_account_id",
+      "debit_amount",
+      "credit_amount",
+      "line_item_number",
+      "description",
+      "created_at"
+    ]
+  },
+  "leave_requests": {
+    "table_name": "leave_requests",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "employee_id",
+      "leave_type_id",
+      "from_date",
+      "to_date",
+      "number_of_days",
+      "reason",
+      "approved_by_employee_id",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "leave_types": {
+    "table_name": "leave_types",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "company_id",
+      "leave_type_code",
+      "leave_type_name",
+      "annual_entitlement",
+      "is_paid",
+      "created_at"
+    ]
+  },
+  "material_plant_data": {
+    "table_name": "material_plant_data",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "material_id",
+      "plant_id",
+      "reorder_point",
+      "reorder_quantity",
+      "safety_stock",
+      "procurement_type",
+      "lead_time_days",
+      "last_receipt_date",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "material_storage_location": {
+    "table_name": "material_storage_location",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "material_id",
+      "storage_location_id",
+      "quantity_on_hand",
+      "reserved_quantity",
+      "available_quantity",
+      "last_counted_date",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "materials": {
+    "table_name": "materials",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "material_code",
+      "material_name",
+      "material_type",
+      "material_group",
+      "unit_of_measure",
+      "standard_price",
+      "currency",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "opportunities": {
+    "table_name": "opportunities",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 15,
+    "columns": [
+      "id",
+      "company_id",
+      "customer_id",
+      "opportunity_number",
+      "opportunity_name",
+      "description",
+      "opportunity_type",
+      "expected_value",
+      "probability_percentage",
+      "expected_close_date",
+      "assigned_to_employee_id",
+      "stage",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "payroll_details": {
+    "table_name": "payroll_details",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "payroll_run_id",
+      "employee_id",
+      "basic_salary",
+      "allowances",
+      "deductions",
+      "gross_pay",
+      "net_pay",
+      "created_at"
+    ]
+  },
+  "payroll_runs": {
+    "table_name": "payroll_runs",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "company_id",
+      "payroll_period",
+      "payroll_date",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "plants": {
+    "table_name": "plants",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "plant_code",
+      "plant_name",
+      "company_id",
+      "location",
+      "plant_type",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "positions": {
+    "table_name": "positions",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 10,
+    "columns": [
+      "id",
+      "company_id",
+      "position_code",
+      "position_name",
+      "department",
+      "reporting_to_position_id",
+      "job_grade",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "production_confirmations": {
+    "table_name": "production_confirmations",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "production_order_id",
+      "confirmation_date",
+      "quantity_produced",
+      "scrap_quantity",
+      "status",
+      "created_at"
+    ]
+  },
+  "production_order_operations": {
+    "table_name": "production_order_operations",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "production_order_id",
+      "work_center_id",
+      "operation_sequence",
+      "operation_status",
+      "actual_start_date",
+      "actual_end_date",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "production_orders": {
+    "table_name": "production_orders",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 13,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "production_order_number",
+      "material_id",
+      "bom_id",
+      "routing_id",
+      "order_quantity",
+      "planned_start_date",
+      "planned_end_date",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "profit_center": {
+    "table_name": "profit_center",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "company_id",
+      "prctr_code",
+      "prctr_name",
+      "responsible_person",
+      "currency",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "purchase_order_items": {
+    "table_name": "purchase_order_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "purchase_order_id",
+      "material_id",
+      "quantity_ordered",
+      "quantity_received",
+      "unit_price",
+      "line_amount",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "purchase_orders": {
+    "table_name": "purchase_orders",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "po_number",
+      "vendor_id",
+      "po_date",
+      "delivery_date",
+      "total_amount",
+      "currency",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "purchase_requisition_items": {
+    "table_name": "purchase_requisition_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "purchase_requisition_id",
+      "material_id",
+      "quantity",
+      "unit_price",
+      "delivery_date",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "purchase_requisitions": {
+    "table_name": "purchase_requisitions",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "company_id",
+      "requisition_number",
+      "requisition_date",
+      "requested_by",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "routing_operations": {
+    "table_name": "routing_operations",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 8,
+    "columns": [
+      "id",
+      "routing_id",
+      "work_center_id",
+      "operation_sequence",
+      "operation_type",
+      "duration_minutes",
+      "setup_time_minutes",
+      "created_at"
+    ]
+  },
+  "routings": {
+    "table_name": "routings",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "material_id",
+      "routing_number",
+      "routing_version",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "salaries": {
+    "table_name": "salaries",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "employee_id",
+      "salary_period",
+      "basic_salary",
+      "allowances",
+      "deductions",
+      "gross_salary",
+      "net_salary",
+      "valid_from",
+      "valid_to",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "sales_order_items": {
+    "table_name": "sales_order_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 9,
+    "columns": [
+      "id",
+      "sales_order_id",
+      "material_id",
+      "quantity_ordered",
+      "quantity_delivered",
+      "unit_price",
+      "line_amount",
+      "line_item_number",
+      "created_at"
+    ]
+  },
+  "sales_orders": {
+    "table_name": "sales_orders",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "sales_order_number",
+      "customer_id",
+      "so_date",
+      "requested_delivery_date",
+      "currency",
+      "total_amount",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "stock_movements": {
+    "table_name": "stock_movements",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "material_id",
+      "from_storage_location_id",
+      "to_storage_location_id",
+      "movement_type",
+      "quantity",
+      "movement_date",
+      "document_number",
+      "reference_doc",
+      "created_at"
+    ]
+  },
+  "storage_locations": {
+    "table_name": "storage_locations",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 6,
+    "columns": [
+      "id",
+      "plant_id",
+      "sloc_code",
+      "sloc_name",
+      "warehouse_type",
+      "created_at"
+    ]
+  },
+  "supplier_contracts": {
+    "table_name": "supplier_contracts",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 12,
+    "columns": [
+      "id",
+      "vendor_id",
+      "contract_number",
+      "contract_type",
+      "start_date",
+      "end_date",
+      "contract_value",
+      "currency",
+      "payment_terms",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "supplier_quotation_items": {
+    "table_name": "supplier_quotation_items",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 7,
+    "columns": [
+      "id",
+      "quotation_id",
+      "material_id",
+      "quantity",
+      "unit_price",
+      "line_amount",
+      "created_at"
+    ]
+  },
+  "supplier_quotations": {
+    "table_name": "supplier_quotations",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 10,
+    "columns": [
+      "id",
+      "vendor_id",
+      "quotation_number",
+      "quotation_date",
+      "validity_end_date",
+      "total_amount",
+      "currency",
+      "status",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "supplier_scorecards": {
+    "table_name": "supplier_scorecards",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "vendor_id",
+      "evaluation_period_from",
+      "evaluation_period_to",
+      "quality_score",
+      "delivery_score",
+      "cost_score",
+      "overall_score",
+      "performance_rating",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "vendors": {
+    "table_name": "vendors",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "vendor_code",
+      "vendor_name",
+      "vendor_type",
+      "country",
+      "payment_terms",
+      "tax_id",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "work_centers": {
+    "table_name": "work_centers",
+    "primary_keys": [
+      "id"
+    ],
+    "column_count": 11,
+    "columns": [
+      "id",
+      "company_id",
+      "plant_id",
+      "work_center_code",
+      "work_center_name",
+      "work_center_type",
+      "capacity_per_period",
+      "cost_center_id",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  }
+}
